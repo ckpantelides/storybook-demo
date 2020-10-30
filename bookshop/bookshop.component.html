@@ -1,0 +1,38 @@
+<Page>
+  <GridLayout columns="*, *" rows="*">
+    <StackLayout
+      class="container hardback"
+      col="0"
+      row="0"
+      horizontalAlignment="center"
+    >
+      <Image src="~/assets/images/paperback.png"></Image>
+      <Label class="book-heading" text="Hardback"></Label>
+      <Label class="book-size" text="25cm x 15cm"></Label>
+      <Label
+        class="book-description"
+        text="A beautiful personalised hardback book in a larger form factor"
+        textwrap="true"
+      ></Label>
+      <Button text="£19.99" (tap)="orderBook('hardback')"></Button>
+      <Label class="delivery-text" text="plus £4.99 delivery fee"></Label>
+    </StackLayout>
+    <StackLayout
+      class="container paperback"
+      col="1"
+      row="0"
+      horizontalAlignment="center"
+    >
+      <Image src="~/assets/images/paperback.png"></Image>
+      <Label class="book-heading" text="Paperback"></Label>
+      <Label class="book-size" text="15cm x 10cm"></Label>
+      <Label
+        class="book-description"
+        textwrap="true"
+        text="A beautiful personalised paperback book in a smaller form factor"
+      ></Label>
+      <Button text="£11.99" (tap)="orderBook('paperback')"></Button>
+      <Label class="delivery-text" text="plus £4.99 delivery fee"></Label>
+    </StackLayout>
+  </GridLayout>
+</Page>

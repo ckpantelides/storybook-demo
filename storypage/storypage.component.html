@@ -1,0 +1,49 @@
+<Page class="cover" [ngStyle]="{ background: 'url(' + background + ')' }">
+  <GridLayout columns="30, *, 30" rows="30, *, 30, 30">
+    <Image
+      class="icon"
+      src="~/assets/images/home.png"
+      row="0"
+      col="0"
+      [nsRouterLink]="['/hub']"
+    ></Image>
+    <Image
+      *ngIf="musicOn"
+      class="icon"
+      src="~/assets/images/music.png"
+      row="0"
+      col="2"
+      (tap)="togglePlay()"
+    ></Image>
+    <Image
+      *ngIf="!musicOn"
+      class="icon"
+      src="~/assets/images/musicOff.png"
+      row="0"
+      col="2"
+      (tap)="togglePlay()"
+    ></Image>
+    <Label
+      [text]="part1"
+      class="story-text"
+      row="2"
+      col="1"
+      textWrap="true"
+    ></Label>
+    <Label (tap)="goBack()" class="nav-button" text="<" row="3" col="0"></Label>
+    <Label
+      [text]="part2"
+      class="story-text"
+      row="3"
+      col="1"
+      textWrap="true"
+    ></Label>
+    <Label
+      (tap)="nextPage()"
+      class="nav-button"
+      text=">"
+      row="3"
+      col="2"
+    ></Label>
+  </GridLayout>
+</Page>

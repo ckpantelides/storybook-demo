@@ -1,0 +1,39 @@
+<Page class="cover" [ngStyle]="{ background: 'url(' + background + ')' }">
+  <GridLayout columns="30, *, 30" rows="30, *, 30, 30">
+    <Image
+      class="icon"
+      src="~/assets/images/home.png"
+      row="0"
+      col="0"
+      [nsRouterLink]="['/hub']"
+    ></Image>
+    <Image
+      *ngIf="musicOn"
+      class="icon"
+      src="~/assets/images/music.png"
+      row="0"
+      col="2"
+      (tap)="togglePlay()"
+    ></Image>
+    <Image
+      *ngIf="!musicOn"
+      class="icon"
+      src="~/assets/images/musicOff.png"
+      row="0"
+      col="2"
+      (tap)="togglePlay()"
+    ></Image>
+    <Label
+      [text]="question"
+      class="question-text"
+      row="2"
+      col="1"
+      textWrap="true"
+    ></Label>
+    <Label (tap)="goBack()" class="nav-button" text="<" row="3" col="0"></Label>
+    <StackLayout row="3" col="1" orientation="horizontal">
+      <Label class="answer-text" text="Yes" (tap)="yesRoute()"></Label
+      ><Label class="answer-text" text="No" (tap)="noRoute()"><</Label>
+    </StackLayout>
+  </GridLayout>
+</Page>

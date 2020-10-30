@@ -1,0 +1,32 @@
+<Page>
+  <StackLayout>
+    <Label class="line" text=""></Label>
+    <StackLayout class="modal-container">
+      <Label
+        class="settings-text"
+        text="Who's the story about?"
+        textWrap="true"
+        textAlignment="center"
+      ></Label>
+      <Label class="settings-text" text="Name:"></Label>
+      <TextField hint="Name..." [(ngModel)]="userName"></TextField>
+
+      <Label class="settings-text" text="Gender:"></Label>
+      <StackLayout orientation="horizontal" horizontalAlignment="center">
+        <Label
+          class="button-gender"
+          [class.active]="girlChosen === true"
+          (tap)="chooseGirl()"
+          text="Girl"
+        ></Label>
+        <Label
+          class="button-gender"
+          [class.active]="boyChosen === true"
+          (tap)="chooseBoy()"
+          text="Boy"
+        ></Label>
+      </StackLayout>
+      <Button class="button-nav" text="Next" (tap)="onNavigate()"></Button>
+    </StackLayout>
+  </StackLayout>
+</Page>

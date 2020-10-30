@@ -1,0 +1,106 @@
+<Page>
+  <StackLayout>
+    <Label class="line" text=""></Label>
+    <StackLayout class="modal-container">
+      <Label
+        class="settings-text"
+        text="What do they look like?"
+        textWrap="true"
+        textAlignment="center"
+      ></Label>
+      <StackLayout *ngIf="girlChosen">
+        <GridLayout
+          columns="80, 80, 80"
+          horizontalAlignment="center"
+          rows="80,80"
+        >
+          <Image
+            src="~/assets/images/girl1.jpg"
+            row="0"
+            col="0"
+            [class.active]="avatar7chosen === true"
+            (tap)="avatarChosen(7)"
+          ></Image>
+          <Image
+            src="~/assets/images/girl2.jpg"
+            row="0"
+            col="1"
+            [class.active]="avatar8chosen === true"
+            (tap)="avatarChosen(8)"
+          ></Image>
+          <Image
+            src="~/assets/images/girl3.jpg"
+            row="0"
+            col="2"
+            [class.active]="avatar9chosen === true"
+            (tap)="avatarChosen(9)"
+          ></Image>
+          <Image
+            src="~/assets/images/girl4.jpg"
+            row="1"
+            col="0"
+            [class.active]="avatar10chosen === true"
+            (tap)="avatarChosen(10)"
+          ></Image>
+          <Image
+            src="~/assets/images/girl5.jpg"
+            row="1"
+            col="1"
+            [class.active]="avatar11chosen === true"
+            (tap)="avatarChosen(11)"
+          ></Image>
+        </GridLayout>
+      </StackLayout>
+      <StackLayout *ngIf="!girlChosen">
+        <GridLayout
+          columns="80, 80, 80"
+          rows="80, 80"
+          horizontalAlignment="center"
+        >
+          <Image
+            src="~/assets/images/boy1.jpg"
+            row="0"
+            col="0"
+            [class.active]="avatar1chosen === true"
+            (tap)="avatarChosen(1)"
+          ></Image>
+          <Image
+            src="~/assets/images/boy2.jpg"
+            row="0"
+            col="1"
+            [class.active]="avatar2chosen === true"
+            (tap)="avatarChosen(2)"
+          ></Image>
+          <Image
+            src="~/assets/images/boy3.jpg"
+            row="0"
+            col="2"
+            [class.active]="avatar3chosen === true"
+            (tap)="avatarChosen(3)"
+          ></Image>
+          <Image
+            src="~/assets/images/boy4.jpg"
+            row="1"
+            col="0"
+            [class.active]="avatar4chosen === true"
+            (tap)="avatarChosen(4)"
+          ></Image>
+          <Image
+            src="~/assets/images/boy5.jpg"
+            row="1"
+            col="1"
+            [class.active]="avatar5chosen === true"
+            (tap)="avatarChosen(5)"
+          ></Image>
+        </GridLayout>
+      </StackLayout>
+      <!-- <Button class="button-nav" text="Go Back" (tap)="onBack()"></Button> -->
+      <Button
+        class="button-nav"
+        text="Restore purchases"
+        (tap)="restorePurchases()"
+      ></Button>
+      <Button class="button-nav" text="Close" (tap)="onClose()"></Button>
+    </StackLayout>
+  </StackLayout>
+</Page>
