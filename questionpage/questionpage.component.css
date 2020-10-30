@@ -1,0 +1,35 @@
+.icon {
+  margin: 5;
+}
+
+.cover {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.question-text,
+.answer-text {
+  font-family: Mansalva-Regular;
+  font-size: 18;
+  color: rgb(26, 25, 25);
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  text-align: center;
+  margin-left: 5;
+  margin-right: 5;
+}
+
+.answer-text {
+  width: 50%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.nav-button {
+  font-family: Mansalva-Regular;
+  color: rgb(26, 25, 25);
+  font-style: italic;
+  font-size: 25;
+  text-align: center;
+}

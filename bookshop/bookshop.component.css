@@ -1,0 +1,45 @@
+Image {
+  height: 40%;
+}
+
+Button {
+  width: 50%;
+}
+
+.container {
+  padding: 5;
+}
+
+.paperback {
+  border-left-width: 1;
+  border-left-color: gray;
+}
+
+.hardback {
+  border-right-width: 3;
+  border-right-color: gray;
+}
+
+.book-heading {
+  font-family: BistroBlock, Bistroblock-oygz;
+  font-size: 25;
+  text-align: center;
+}
+
+.book-size {
+  font-family: Mansalva-Regular;
+  font-size: 15;
+  text-align: center;
+}
+
+.book-description {
+  font-family: Mansalva-Regular;
+  font-size: 20;
+  text-align: center;
+}
+
+.delivery-text {
+  font-family: Mansalva-Regular;
+  font-size: 12;
+  text-align: center;
+}

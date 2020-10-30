@@ -1,0 +1,51 @@
+.modal-container {
+  margin: 10;
+  height: 100%;
+  width: 50%;
+  background-color: white;
+}
+
+TextField {
+  font-family: Mansalva-Regular;
+  font-size: 20;
+}
+
+.settings-text {
+  font-family: BistroBlock, Bistroblock-oygz;
+  font-size: 30;
+  margin: 10;
+}
+
+.button-gender {
+  font-family: Mansalva-Regular;
+  font-size: 20;
+  text-align: center;
+  width: 55;
+  color: black;
+  padding: 5;
+  margin: 10;
+  border-width: 1;
+  border-color: rgb(167, 167, 167);
+  border-radius: 10;
+}
+
+.button-nav {
+  width: 80%;
+}
+
+Image {
+  width: 75;
+  height: 75;
+}
+
+.active {
+  border-color: goldenrod;
+  border-width: 4;
+}
+
+.line {
+  width: 50%;
+  margin-right: 50%;
+  border-bottom-width: 3;
+  border-bottom-color: goldenrod;
+}
