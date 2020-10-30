@@ -6,7 +6,7 @@ The trailer below shows the:
 * animated homescreen
 * character select screen
 * Secret Superhero story
-* bookstore for purchasing physical copies of the stories
+* bookstop for purchasing physical copies of the stories
 
 ![](trailer.gif)
 
