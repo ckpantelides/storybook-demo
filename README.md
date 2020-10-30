@@ -12,7 +12,7 @@ The trailer below shows the:
 
 There are four professionally illustrated stories, three of which are in-app purchases.
 
-The app is built with NativeScript-Angular and TypeScript and will be available for iOS and Android.
+The app is built with NativeScript-Angular and TypeScript and will be available for iOS and Android. There's also a node backend for handling bookshop orders, and a React admin dashboard to view bookshop orders.
 
 ### Code structure
 
@@ -23,6 +23,8 @@ The app opens on the hub page, which shows the four stories horizontally. As the
 The user chooses the name and the look of the protagonist in the [settings component](https://github.com/ckpantelides/storybook-demo/tree/main/settings). The name, gender and avatar are saved in Application Settings. This is then fed into the story data arrays which are used by the story-page component.
 
 In-app purchases rely on the nativescript-purchase module. The [in-app purchase service](https://github.com/ckpantelides/storybook-demo/blob/main/services/iap.service.ts) controls making new purchases, checking whether stories have already been purchased, restoring purchases and marking stories as 'purchased' on the hub page. When a user clicks on a story from the hub page, it checks whether the story has been purchased, and then uses the [settings service](https://github.com/ckpantelides/storybook-demo/blob/main/services/settings.service.ts) to check whether the name, gender or avatar hasn't been set.
+
+#### Bookshop and node backend
 
 Users can also purchase physical copies of the four stories via the [bookshop](https://github.com/ckpantelides/storybook-demo/tree/main/bookshop). Payments are handled by Stripe and its Payment Intents API, which complies with the Strong Customer Authentication requirements. The app uses the NativeScript httpModule to communicate with my node backend the authenticates payments and stores order details. The node backed also authenticates via JWT an admin dashboard for viewing the orders.
 
